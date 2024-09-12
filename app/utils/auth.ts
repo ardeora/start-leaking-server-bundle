@@ -12,6 +12,7 @@ export const sessionConfig = {
 } satisfies SessionConfig
 
 export const getSessionData = async () => {
+  'use server'
   const session = await getSession<SessionData>(sessionConfig)
   return session.data
 }
